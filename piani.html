@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piani di Abbonamento - Vegasdrama</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        body { background-color: #141414; color: #fff; padding: 40px 20px; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; text-align: center; }
+        h1 { font-size: 36px; margin-bottom: 20px; color: #e50914; }
+        p { font-size: 16px; color: #ccc; margin-bottom: 40px; }
+        .plans-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .plan-card { background: #1f1f1f; border: 1px solid #333; border-radius: 8px; padding: 30px; width: 300px; text-align: left; position: relative; }
+        .plan-card h2 { font-size: 24px; margin-bottom: 15px; }
+        .plan-card ul { list-style: none; margin-bottom: 25px; }
+        .plan-card ul li { margin-bottom: 10px; color: #aaa; font-size: 14px; }
+        .btn-stripe { display: block; background: #e50914; color: #fff; text-align: center; padding: 12px; border-radius: 4px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
+        .btn-stripe:hover { background: #b80710; }
+        .back-link { display: inline-block; margin-top: 40px; color: #fff; text-decoration: underline; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Scegli il tuo piano su Vegasdrama</h1>
+        <p>Accedi a tutte le produzioni esclusive, mini-serie e contenuti in qualità cinematografica.</p>
+
+        <div class="plans-grid">
+            <!-- Piano Basic -->
+            <div class="plan-card">
+                <h2>Abbonamento Basic</h2>
+                <ul>
+                    <li>✔ Accesso ai filmati Base</li>
+                    <li>✔ Streaming illimitato</li>
+                    <li>✔ Qualità HD</li>
+                </ul>
+                <!-- INSERISCI QUI IL TUO LINK STRIPE BASIC -->
+                <a href="INSERISCI_LINK_STRIPE_BASIC" class="btn-stripe">Abbonati Basic</a>
+            </div>
+
+            <!-- Piano Premium -->
+            <div class="plan-card" style="border-color: #e50914;">
+                <h2>Abbonamento Premium</h2>
+                <ul>
+                    <li>✔ Accesso completo a tutte le mini-serie</li>
+                    <li>✔ Anteprime esclusive e contenuti extra</li>
+                    <li>✔ Massima qualità cinematografica</li>
+                </ul>
+                <!-- INSERISCI QUI IL TUO LINK STRIPE PREMIUM -->
+                <a href="INSERISCI_LINK_STRIPE_PREMIUM" class="btn-stripe">Abbonati Premium</a>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link">← Torna alla Home</a>
+    </div>
+
+</body>
+</html>

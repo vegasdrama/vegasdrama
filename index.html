@@ -27,6 +27,23 @@
         .card { min-width: 200px; height: 300px; background-size: cover; background-position: center; border-radius: 4px; transition: transform 0.3s; cursor: pointer; position: relative; }
         .card:hover { transform: scale(1.05); }
         .card-title { position: absolute; bottom: 10px; left: 10px; font-weight: bold; font-size: 14px; background: rgba(0,0,0,0.6); padding: 4px 8px; border-radius: 3px; }
+/* Adattamento per dispositivi mobili */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 13px;
+    }
+    .hero h1 {
+        font-size: 36px;
+    }
+}
     </style>
 </head>
 <body>

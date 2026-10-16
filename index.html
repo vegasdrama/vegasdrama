@@ -100,8 +100,11 @@
         <h1>Vegas Drama Exclusives</h1>
         <p>Guarda le migliori produzioni e filmati generati dall'intelligenza artificiale in qualità cinematografica.</p>
         <div class="hero-btns">
-            <button class="btn-main">▶ Guarda ora</button>
-            <button class="btn-secondary">ℹ Maggiori informazioni</button>
+      <!-- Pulsante Guarda ora (mostra l'avviso di blocco) -->
+    <a href="#" onclick="alert('Contenuto riservato agli abbonati! Sottoscrivi un piano Basic o Premium per sbloccare tutti i filmati.'); return false;" class="btn-main" style="text-decoration: none; display: inline-block; text-align: center;">▶ Guarda ora</a>
+    
+    <!-- Pulsante Maggiori informazioni (porta alla pagina dei piani) -->
+    <a href="piani.html" class="btn-secondary" style="text-decoration: none; display: inline-block; text-align: center;">ℹ Maggiori informazioni</a>
         </div>
     </section>
 

@@ -68,7 +68,7 @@
 
     <div class="main-container">
         
-        <span class="badge-free">FREE TRIAL LESSON / EPISODE</span>
+        <span class="badge-free">FREE TRIAL EPISODE</span>
         <h1 id="seriesTitle">I Married The Mafia Devil - Episode 1</h1>
         <p class="subtitle">Enjoy this free preview episode. Subscribe to unlock the full season!</p>
 
@@ -89,20 +89,22 @@
         <div class="unlock-box">
             <h2>Want to see what happens next? 🍿</h2>
             <p>Get full access to all 40+ episodes and all series in Full HD.</p>
-            <a href="https://buy.stripe.com/6oU28u0nwcDh1KG2l9dEs00" target="_blank" class="btn-unlock">🔓 Unlock Full Catalog ($1.99/mo)</a>
+            <a href="https://buy.stripe.com/6oU28u0nwcDh1KG2l9dEs00" target="_blank" class="btn-unlock">🔓 Unlock Full Catalog (€4.99/mo)</a>
         </div>
 
         <a href="index.html" class="back-link">← Back to Homepage</a>
     </div>
 
     <script>
-        // Leggi i parametri nell'URL se viene passato un video specifico
         const urlParams = new URLSearchParams(window.location.search);
         const serieParam = urlParams.get('serie');
 
+        const btns = document.querySelectorAll('.trial-btn');
+
         if (serieParam === 'systemcrash') {
-            const btns = document.querySelectorAll('.trial-btn');
             caricaTrial('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0', "System Crash: Tyrant's Obsession - Episode 1", btns[1]);
+        } else {
+            caricaTrial('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0', "I Married The Mafia Devil - Episode 1", btns[0]);
         }
 
         function caricaTrial(url, titolo, elementoBtn) {

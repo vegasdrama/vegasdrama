@@ -62,6 +62,7 @@
             text-decoration: none;
             color: #fff;
             display: block;
+            cursor: pointer;
         }
         .episode-card:hover { border-color: #e50914; background: #262626; transform: translateY(-3px); }
         .episode-card h4 { font-size: 15px; margin-bottom: 5px; }
@@ -101,9 +102,9 @@
         
         <!-- Player in evidenza -->
         <div class="featured-player">
-            <div class="featured-title">▶ In Riproduzione: Watch System Crash - Episodio 1</div>
+            <div id="titoloInRiproduzione" class="featured-title">▶ In Riproduzione: Watch System Crash - Episodio 1</div>
             <div class="video-wrapper">
-                <iframe src="https://player.vimeo.com/video/1236723346?badge=0&autopause=0&player_id=0&app_id=58798" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" allowfullscreen title="Watch System Crash"></iframe>
+                <iframe id="videoPlayer" src="https://player.vimeo.com/video/1236723346?badge=0&autopause=0&player_id=0&app_id=58798" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" allowfullscreen title="Watch System Crash"></iframe>
             </div>
         </div>
 
@@ -111,21 +112,25 @@
         <div class="episodes-section">
             <h2 class="section-title">Episodi di: Watch System Crash</h2>
             <div class="episodes-grid">
-                <!-- Episodio 1 (Attivo) -->
-                <a href="#" class="episode-card" style="border-color: #e50914;">
+                
+                <!-- Episodio 1 -->
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236723346?badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 1')" class="episode-card" style="border-color: #e50914;">
                     <h4>Episodio 1</h4>
-                    <p>In riproduzione</p>
+                    <p>Disponibile</p>
                 </a>
-                <!-- Episodio 2 (Da collegare quando caricherai il video su Vimeo) -->
-                <a href="#" class="episode-card">
+
+                <!-- Episodio 2 (Sostituisci il link qui sotto quando caricherai l'Ep 2 su Vimeo) -->
+                <a onclick="cambiaEpisodio('INSERISCI_LINK_VIMEO_EP_2', 'Watch System Crash - Episodio 2')" class="episode-card">
                     <h4>Episodio 2</h4>
-                    <p>Disponibile presto</p>
+                    <p>Guarda ora</p>
                 </a>
-                <!-- Episodio 3 -->
-                <a href="#" class="episode-card">
+
+                <!-- Episodio 3 (Sostituisci il link qui sotto quando caricherai l'Ep 3 su Vimeo) -->
+                <a onclick="cambiaEpisodio('INSERISCI_LINK_VIMEO_EP_3', 'Watch System Crash - Episodio 3')" class="episode-card">
                     <h4>Episodio 3</h4>
-                    <p>Disponibile presto</p>
+                    <p>Guarda ora</p>
                 </a>
+
             </div>
         </div>
 
@@ -164,6 +169,15 @@
 
         <a href="index.html" class="back-home">← Torna alla Home principale</a>
     </div>
+
+    <!-- Script per cambiare episodio al click senza ricaricare la pagina -->
+    <script>
+        function cambiaEpisodio(urlVimeo, titoloEpisodio) {
+            document.getElementById('videoPlayer').src = urlVimeo;
+            document.getElementById('titoloInRiproduzione').innerText = '▶ In Riproduzione: ' + titoloEpisodio;
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
 
 </body>
 </html>

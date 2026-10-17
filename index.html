@@ -117,6 +117,18 @@
             <div class="card" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400');"><span class="card-title">AI Genesis</span></div>
         </div>
     </section>
-
+<script>
+    // Controlla se l'utente ha già effettuato l'accesso all'area sbloccata
+    if (localStorage.getItem('vegasdrama_subscribed') === 'true') {
+        // Cerca i pulsanti principali di abbonamento e li aggiorna
+        const subscribeBtns = document.querySelectorAll('.btn-subscribe, .btn-main');
+        subscribeBtns.forEach(btn => {
+            btn.href = 'sbloccato.html';
+            btn.innerText = 'Accedi al Catalogo';
+            btn.style.backgroundColor = '#46d369'; // Tasto verde per indicare l'accesso attivo
+            btn.style.color = '#fff';
+        });
+    }
+</script>
 </body>
 </html>

@@ -3,28 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vegasdrama - Area Sbloccata</title>
+    <title>Catalogo Abbonati - Vegasdrama</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
         body { background-color: #141414; color: #fff; }
+        
         header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #141414; border-bottom: 1px solid #333; }
         .logo { color: #e50914; font-size: 24px; font-weight: bold; letter-spacing: 1px; }
-        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; text-align: center; }
-        h1 { font-size: 28px; margin-bottom: 10px; }
-        p { color: #aaa; margin-bottom: 30px; font-size: 16px; }
         
-        /* Box del video Vimeo in stile cinematografico */
-        .video-box {
+        .main-container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        
+        /* Sezione Video Principale (Ottimizzata per Verticali e Fullscreen) */
+        .featured-player {
+            background: #1f1f1f;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+        .featured-title { font-size: 22px; margin-bottom: 15px; color: #fff; text-align: left; width: 100%; }
+        
+        /* Contenitore verticale per Shorts / Mini-serie */
+        .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
+            width: 100%;
+            max-width: 400px; /* Perfetto per video verticali */
+            aspect-ratio: 9/16;
             background: #000;
             border-radius: 8px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.7);
-            margin-bottom: 30px;
+            overflow: hidden;
         }
-        .video-box iframe {
+        .video-wrapper iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -32,26 +44,98 @@
             height: 100%;
             border: 0;
         }
-        .back-btn { display: inline-block; padding: 10px 20px; background: #333; color: #fff; text-decoration: none; border-radius: 4px; transition: background 0.3s; }
-        .back-btn:hover { background: #e50914; }
+
+        /* Griglia delle altre serie disponibili per gli abbonati */
+        h2.section-title { font-size: 20px; margin-bottom: 20px; border-left: 4px solid #e50914; padding-left: 10px; }
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        .catalog-card {
+            background: #1f1f1f;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+            border: 1px solid #333;
+        }
+        .catalog-card:hover { transform: scale(1.03); border-color: #e50914; }
+        .catalog-thumb {
+            width: 100%;
+            aspect-ratio: 9/16;
+            background: #222;
+            object-fit: cover;
+        }
+        .catalog-info { padding: 15px; }
+        .catalog-info h3 { font-size: 16px; margin-bottom: 5px; }
+        .catalog-info p { font-size: 13px; color: #aaa; }
+
+        .back-home { display: block; text-align: center; margin: 40px 0; color: #aaa; text-decoration: none; font-size: 14px; }
+        .back-home:hover { color: #fff; }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo">VEGASDRAMA</div>
+        <div style="font-size: 14px; color: #46d369;">● Abbonamento Attivo</div>
     </header>
 
-    <div class="container">
-        <h1>Area Riservata - Contenuto Sbloccato</h1>
-        <p>Grazie per aver scelto i nostri piani. Ecco la tua mini-serie pronta per la riproduzione.</p>
-
-        <!-- Player Vimeo incorporato -->
-        <div class="video-box">
-            <iframe src="https://player.vimeo.com/video/1236723346?badge=0&autopause=0&player_id=0&app_id=58798" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Watch System Crash: Tyrant's Obsession Episode 1"></iframe>
+    <div class="main-container">
+        
+        <!-- Player in evidenza con supporto Fullscreen e formato verticale -->
+        <div class="featured-player">
+            <div class="featured-title">▶ In Riproduzione: Watch System Crash - Episodio 1</div>
+            <div class="video-wrapper">
+                <iframe src="https://player.vimeo.com/video/1236723346?badge=0&autopause=0&player_id=0&app_id=58798" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" allowfullscreen title="Watch System Crash"></iframe>
+            </div>
         </div>
 
-        <a href="index.html" class="back-btn">← Torna alla Home</a>
+        <!-- Libreria completa sbloccata per l'abbonato -->
+        <h2 class="section-title">Tutte le Mini-Serie e i Filmati Sbloccati</h2>
+        <div class="catalog-grid">
+            
+            <!-- Serie 1 -->
+            <div class="catalog-card">
+                <div style="background: #e50914; height: 250px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;">[ Mini Serie 1 ]</div>
+                <div class="catalog-info">
+                    <h3>System Crash Ep. 1</h3>
+                    <p>Disponibile in HD</p>
+                </div>
+            </div>
+
+            <!-- Serie 2 -->
+            <div class="catalog-card">
+                <div style="background: #333; height: 250px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;">[ Cyber City 2099 ]</div>
+                <div class="catalog-info">
+                    <h3>Cyber City 2099</h3>
+                    <p>Nuova uscita</p>
+                </div>
+            </div>
+
+            <!-- Serie 3 -->
+            <div class="catalog-card">
+                <div style="background: #444; height: 250px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;">[ Shadows of Vegas ]</div>
+                <div class="catalog-info">
+                    <h3>Shadows of Vegas</h3>
+                    <p>Esclusiva Premium</p>
+                </div>
+            </div>
+
+            <!-- Serie 4 -->
+            <div class="catalog-card">
+                <div style="background: #222; height: 250px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;">[ Neon Dreams ]</div>
+                <div class="catalog-info">
+                    <h3>Neon Dreams</h3>
+                    <p>Stagione Completa</p>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="index.html" class="back-home">← Torna alla Home principale</a>
     </div>
 
 </body>

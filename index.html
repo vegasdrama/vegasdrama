@@ -142,8 +142,8 @@
             <div class="section-heading">🔥 Most Watched on Vegasdrama</div>
             <div class="cards-scroll-container">
                 
-                <!-- Card 1: I Married The Mafia Devil -->
-                <a href="#" onclick="alert('Exclusive content for subscribers! Subscribe to a Basic or Premium plan above to unlock all videos.'); return false;" class="card" style="background-image: url('https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=400');">
+                <!-- Card 1: I Married The Mafia Devil (Vimeo Thumbnail) -->
+                <a href="#" onclick="alert('Exclusive content for subscribers! Subscribe to a Basic or Premium plan above to unlock all videos.'); return false;" class="card" style="background-image: url('https://vumbnail.com/1236893916.jpg');">
                     <div class="card-title">I Married The Mafia Devil</div>
                 </a>
 
@@ -176,20 +176,4 @@
         if (localStorage.getItem('vegasdrama_subscribed') === 'true') {
             const subscribeBtns = document.querySelectorAll('.btn-subscribe, .btn-main');
             subscribeBtns.forEach(btn => {
-                btn.href = 'sbloccato.html';
-                btn.innerText = 'Access Catalog';
-                btn.style.backgroundColor = '#46d369';
-                btn.style.color = '#fff';
-                btn.removeAttribute('onclick');
-                btn.removeAttribute('target');
-            });
-
-            const lockedCards = document.querySelectorAll('a[onclick*="alert"]');
-            lockedCards.forEach(card => {
-                card.href = 'sbloccato.html';
-                card.removeAttribute('onclick');
-            });
-        }
-    </script>
-</body>
-</html>
+                btn.href = 'sbl

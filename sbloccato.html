@@ -51,7 +51,7 @@
             grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
             gap: 10px;
             margin-top: 15px;
-            max-height: 250px;
+            max-height: 280px;
             overflow-y: auto;
             padding-right: 5px;
         }
@@ -84,6 +84,7 @@
             overflow: hidden;
             transition: transform 0.3s;
             border: 1px solid #333;
+            cursor: pointer;
         }
         .catalog-card:hover { transform: scale(1.03); border-color: #e50914; }
         .catalog-info { padding: 15px; }
@@ -104,49 +105,57 @@
         
         <!-- Player -->
         <div class="featured-player">
-            <div id="titoloInRiproduzione" class="featured-title">▶ Now Playing: Watch System Crash - Episode 1</div>
+            <div id="titoloInRiproduzione" class="featured-title">▶ Now Playing: Bound by Blood - Episode 1</div>
             <div class="video-wrapper">
-                <iframe id="videoPlayer" src="https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" allowfullscreen title="Watch System Crash"></iframe>
+                <iframe id="videoPlayer" src="https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" allowfullscreen title="Bound by Blood"></iframe>
             </div>
         </div>
 
-        <!-- Episodes Grid Section -->
+        <!-- 40 Episodes Section: Bound by Blood -->
         <div class="episodes-section">
-            <h2 class="section-title">Episodes: System Crash: Tyrant's Obsession (31 Episodes)</h2>
+            <h2 class="section-title">Episodes: Bound by Blood (40 Episodes)</h2>
             <div class="episodes-grid">
                 
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 1')" class="episode-card" style="border-color: #e50914;"><h4>Ep 1</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236726931?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 2')" class="episode-card"><h4>Ep 2</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236796383?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 3')" class="episode-card"><h4>Ep 3</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236865921?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 4')" class="episode-card"><h4>Ep 4</h4></a>
-
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236865922?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 5')" class="episode-card"><h4>Ep 5</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866008?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 6')" class="episode-card"><h4>Ep 6</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236865981?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 7')" class="episode-card"><h4>Ep 7</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236865923?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 8')" class="episode-card"><h4>Ep 8</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236865924?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 9')" class="episode-card"><h4>Ep 9</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866270?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 10')" class="episode-card"><h4>Ep 10</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866171?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 11')" class="episode-card"><h4>Ep 11</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866065?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 12')" class="episode-card"><h4>Ep 12</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866290?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 13')" class="episode-card"><h4>Ep 13</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866289?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 14')" class="episode-card"><h4>Ep 14</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866269?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 15')" class="episode-card"><h4>Ep 15</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866382?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 16')" class="episode-card"><h4>Ep 16</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866380?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 17')" class="episode-card"><h4>Ep 17</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866379?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 18')" class="episode-card"><h4>Ep 18</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866455?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 19')" class="episode-card"><h4>Ep 19</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866413?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 20')" class="episode-card"><h4>Ep 20</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866383?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 21')" class="episode-card"><h4>Ep 21</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866508?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 22')" class="episode-card"><h4>Ep 22</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866507?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 23')" class="episode-card"><h4>Ep 23</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866506?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 24')" class="episode-card"><h4>Ep 24</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866580?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 25')" class="episode-card"><h4>Ep 25</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866571?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 26')" class="episode-card"><h4>Ep 26</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866538?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 27')" class="episode-card"><h4>Ep 27</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866719?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 28')" class="episode-card"><h4>Ep 28</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866627?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 29')" class="episode-card"><h4>Ep 29</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866615?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 30')" class="episode-card"><h4>Ep 30</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866720?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 31')" class="episode-card"><h4>Ep 31</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 1')" class="episode-card" style="border-color: #e50914;"><h4>Ep 1</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893920?h=66b3115d7a&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 2')" class="episode-card"><h4>Ep 2</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893921?h=2a23a4b51d&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 3')" class="episode-card"><h4>Ep 3</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893922?h=5d3783d790&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 4')" class="episode-card"><h4>Ep 4</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893932?h=efacbc8c18&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 5')" class="episode-card"><h4>Ep 5</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893939?h=67551780f4&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 6')" class="episode-card"><h4>Ep 6</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893935?h=8f7256b3d4&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 7')" class="episode-card"><h4>Ep 7</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893929?h=af0875ae82&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 8')" class="episode-card"><h4>Ep 8</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893940?h=b6d3e9e9dc&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 9')" class="episode-card"><h4>Ep 9</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893925?h=28dbd7a48a&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 10')" class="episode-card"><h4>Ep 10</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893931?h=63210c5af4&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 11')" class="episode-card"><h4>Ep 11</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893924?h=2f77822cea&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 12')" class="episode-card"><h4>Ep 12</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893936?h=104744e1b0&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 13')" class="episode-card"><h4>Ep 13</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893938?h=d598ebf572&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 14')" class="episode-card"><h4>Ep 14</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893934?h=f227d79452&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 15')" class="episode-card"><h4>Ep 15</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893943?h=3a7e27b0b9&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 16')" class="episode-card"><h4>Ep 16</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893928?h=7c40452f6f&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 17')" class="episode-card"><h4>Ep 17</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893933?h=683da66224&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 18')" class="episode-card"><h4>Ep 18</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893930?h=b8e1bcb8cb&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 19')" class="episode-card"><h4>Ep 19</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893926?h=809f3373e3&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 20')" class="episode-card"><h4>Ep 20</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893942?h=68cf05d9a8&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 21')" class="episode-card"><h4>Ep 21</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893941?h=4dbc6270a8&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 22')" class="episode-card"><h4>Ep 22</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893945?h=eb40a92721&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 23')" class="episode-card"><h4>Ep 23</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893927?h=4de9864dde&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 24')" class="episode-card"><h4>Ep 24</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893937?h=8a6bb876aa&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 25')" class="episode-card"><h4>Ep 25</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893949?h=b0f36603a0&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 26')" class="episode-card"><h4>Ep 26</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893953?h=a8f2024cf8&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 27')" class="episode-card"><h4>Ep 27</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893954?h=a24087d976&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 28')" class="episode-card"><h4>Ep 28</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893947?h=d3492ed4b7&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 29')" class="episode-card"><h4>Ep 29</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893950?h=51b371e607&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 30')" class="episode-card"><h4>Ep 30</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893951?h=864968c026&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 31')" class="episode-card"><h4>Ep 31</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893946?h=3039d9fd42&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 32')" class="episode-card"><h4>Ep 32</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893957?h=84f223986a&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 33')" class="episode-card"><h4>Ep 33</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893955?h=0e41cc537a&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 34')" class="episode-card"><h4>Ep 34</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893952?h=b2f04692de&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 35')" class="episode-card"><h4>Ep 35</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893959?h=ff9035b9ee&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 36')" class="episode-card"><h4>Ep 36</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893956?h=6ffe42e69b&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 37')" class="episode-card"><h4>Ep 37</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893948?h=939dedd2ea&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 38')" class="episode-card"><h4>Ep 38</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893958?h=e41df52bb1&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 39')" class="episode-card"><h4>Ep 39</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893958?h=e41df52bb1&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 40')" class="episode-card"><h4>Ep 40</h4></a>
 
             </div>
         </div>
@@ -154,32 +163,39 @@
         <!-- Full Library -->
         <h2 class="section-title">All Unlocked Mini-Series & Movies</h2>
         <div class="catalog-grid">
-            <div class="catalog-card">
-                <div style="background: #e50914; height: 220px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;">[ System Crash ]</div>
+            <div class="catalog-card" onclick="cambiaEpisodio('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Bound by Blood - Episode 1')">
+                <div style="background: url('https://vumbnail.com/1236893916.jpg') center/cover; height: 220px; display: flex; align-items: flex-end; padding: 10px; font-weight: bold; color: #fff;">
+                    <span style="background: rgba(0,0,0,0.8); padding: 4px 8px; border-radius: 4px; font-size: 12px;">New Release</span>
+                </div>
                 <div class="catalog-info">
-                    <h3>System Crash: Tyrant's Obsession</h3>
-                    <p>Available in HD</p>
+                    <h3>Bound by Blood</h3>
+                    <p>40 Episodes • Full HD</p>
                 </div>
             </div>
+
+            <div class="catalog-card" onclick="cambiaEpisodio('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 1')">
+                <div style="background: url('https://vumbnail.com/1236723346.jpg') center/cover; height: 220px; display: flex; align-items: flex-end; padding: 10px; font-weight: bold; color: #fff;">
+                    <span style="background: rgba(0,0,0,0.8); padding: 4px 8px; border-radius: 4px; font-size: 12px;">Complete Season</span>
+                </div>
+                <div class="catalog-info">
+                    <h3>System Crash: Tyrant's Obsession</h3>
+                    <p>31 Episodes • Full HD</p>
+                </div>
+            </div>
+
             <div class="catalog-card">
                 <div style="background: #333; height: 220px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;">[ Cyber City 2099 ]</div>
                 <div class="catalog-info">
                     <h3>Cyber City 2099</h3>
-                    <p>New Release</p>
+                    <p>Coming Soon</p>
                 </div>
             </div>
+
             <div class="catalog-card">
                 <div style="background: #444; height: 220px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;">[ Shadows of Vegas ]</div>
                 <div class="catalog-info">
                     <h3>Shadows of Vegas</h3>
-                    <p>Premium Exclusive</p>
-                </div>
-            </div>
-            <div class="catalog-card">
-                <div style="background: #222; height: 220px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;">[ Neon Dreams ]</div>
-                <div class="catalog-info">
-                    <h3>Neon Dreams</h3>
-                    <p>Full Season</p>
+                    <p>Coming Soon</p>
                 </div>
             </div>
         </div>

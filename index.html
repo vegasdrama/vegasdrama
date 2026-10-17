@@ -118,15 +118,25 @@
         </div>
     </section>
 <script>
-    // Controlla se l'utente ha già effettuato l'accesso all'area sbloccata
+  <script>
+    // Controlla se l'utente è abbonato
     if (localStorage.getItem('vegasdrama_subscribed') === 'true') {
-        // Cerca i pulsanti principali di abbonamento e li aggiorna
+        
+        // 1. Aggiorna i pulsanti "Abbonati" in "Accedi al Catalogo"
         const subscribeBtns = document.querySelectorAll('.btn-subscribe, .btn-main');
         subscribeBtns.forEach(btn => {
             btn.href = 'sbloccato.html';
             btn.innerText = 'Accedi al Catalogo';
-            btn.style.backgroundColor = '#46d369'; // Tasto verde per indicare l'accesso attivo
+            btn.style.backgroundColor = '#46d369';
             btn.style.color = '#fff';
+            btn.removeAttribute('onclick'); // Rimuove eventuali avvisi di blocco
+        });
+
+        // 2. Sblocca anche le card del catalogo in basso nella Home
+        const lockedCards = document.querySelectorAll('a[onclick*="alert"]');
+        lockedCards.forEach(card => {
+            card.href = 'sbloccato.html';
+            card.removeAttribute('onclick'); // Disattiva il popup d'errore
         });
     }
 </script>

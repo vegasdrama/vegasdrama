@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Trial - Vegasdrama</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        body { background-color: #141414; color: #fff; }
+        
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #141414; border-bottom: 1px solid #333; }
+        .logo { color: #e50914; font-size: 24px; font-weight: bold; letter-spacing: 1px; text-decoration: none; }
+        .btn-subscribe { background-color: #E50914; color: #fff; padding: 9px 18px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 14px; }
+
+        .main-container { max-width: 900px; margin: 30px auto; padding: 0 20px; text-align: center; }
+        
+        .badge-free { background: #E50914; color: #fff; font-size: 12px; font-weight: bold; padding: 4px 12px; border-radius: 12px; display: inline-block; margin-bottom: 15px; }
+        h1 { font-size: 28px; margin-bottom: 10px; }
+        p.subtitle { font-size: 16px; color: #aaa; margin-bottom: 25px; }
+
+        /* Video Player */
+        .player-box {
+            background: #1f1f1f;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 0 auto 30px auto;
+            max-width: 450px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 9/16;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+        /* Selector for Free Episodes */
+        .trial-selector { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; }
+        .trial-btn { background: #262626; color: #fff; border: 1px solid #444; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: 0.2s; }
+        .trial-btn:hover, .trial-btn.active { border-color: #E50914; background: #333; }
+
+        /* Unlock Banner */
+        .unlock-box {
+            background: linear-gradient(135deg, #1f1f1f 0%, #2a080a 100%);
+            border: 1px solid #E50914;
+            border-radius: 12px;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        .unlock-box h2 { font-size: 24px; margin-bottom: 10px; }
+        .unlock-box p { color: #ccc; margin-bottom: 20px; font-size: 15px; }
+        .btn-unlock { background: #E50914; color: #fff; padding: 14px 32px; border-radius: 6px; font-size: 18px; font-weight: bold; text-decoration: none; display: inline-block; transition: 0.3s; }
+        .btn-unlock:hover { transform: scale(1.05); background: #ff0f1b; }
+
+        .back-link { display: inline-block; margin-top: 30px; color: #888; text-decoration: none; font-size: 14px; }
+        .back-link:hover { color: #fff; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">VEGASDRAMA</a>
+        <a href="https://buy.stripe.com/6oU28u0nwcDh1KG2l9dEs00" target="_blank" class="btn-subscribe">Subscribe Now</a>
+    </header>
+
+    <div class="main-container">
+        
+        <span class="badge-free">FREE TRIAL LESSON / EPISODE</span>
+        <h1 id="seriesTitle">I Married The Mafia Devil - Episode 1</h1>
+        <p class="subtitle">Enjoy this free preview episode. Subscribe to unlock the full season!</p>
+
+        <!-- Selector -->
+        <div class="trial-selector">
+            <button class="trial-btn active" onclick="caricaTrial('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0', 'I Married The Mafia Devil - Episode 1', this)">I Married The Mafia Devil</button>
+            <button class="trial-btn" onclick="caricaTrial('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0', 'System Crash: Tyrant\'s Obsession - Episode 1', this)">System Crash</button>
+        </div>
+
+        <!-- Player -->
+        <div class="player-box">
+            <div class="video-wrapper">
+                <iframe id="trialIframe" src="https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Unlock Banner -->
+        <div class="unlock-box">
+            <h2>Want to see what happens next? 🍿</h2>
+            <p>Get full access to all 40+ episodes and all series in Full HD.</p>
+            <a href="https://buy.stripe.com/6oU28u0nwcDh1KG2l9dEs00" target="_blank" class="btn-unlock">🔓 Unlock Full Catalog ($1.99/mo)</a>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Homepage</a>
+    </div>
+
+    <script>
+        // Leggi i parametri nell'URL se viene passato un video specifico
+        const urlParams = new URLSearchParams(window.location.search);
+        const serieParam = urlParams.get('serie');
+
+        if (serieParam === 'systemcrash') {
+            const btns = document.querySelectorAll('.trial-btn');
+            caricaTrial('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0', "System Crash: Tyrant's Obsession - Episode 1", btns[1]);
+        }
+
+        function caricaTrial(url, titolo, elementoBtn) {
+            document.getElementById('trialIframe').src = url;
+            document.getElementById('seriesTitle').innerText = titolo;
+            
+            document.querySelectorAll('.trial-btn').forEach(btn => btn.classList.remove('active'));
+            if(elementoBtn) elementoBtn.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

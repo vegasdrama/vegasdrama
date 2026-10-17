@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogo Abbonati - Vegasdrama</title>
+    <title>Subscriber Catalog - Vegasdrama</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
         body { background-color: #141414; color: #fff; }
@@ -13,7 +13,7 @@
         
         .main-container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
         
-        /* Sezione Video Principale */
+        /* Featured Player Section */
         .featured-player {
             background: #1f1f1f;
             border-radius: 12px;
@@ -44,7 +44,7 @@
             border: 0;
         }
 
-        /* Griglia episodi compatta per tutti i 31 episodi */
+        /* Episodes Grid */
         .episodes-section { margin-bottom: 40px; }
         .episodes-grid {
             display: grid;
@@ -70,7 +70,7 @@
         .episode-card:hover { border-color: #e50914; background: #262626; transform: translateY(-2px); }
         .episode-card h4 { font-size: 13px; margin: 0; }
 
-        /* Griglia delle altre serie */
+        /* Other Series Grid */
         h2.section-title { font-size: 20px; margin: 40px 0 20px 0; border-left: 4px solid #e50914; padding-left: 10px; }
         .catalog-grid {
             display: grid;
@@ -102,97 +102,95 @@
 
     <div class="main-container">
         
-        <!-- Player in evidenza -->
+        <!-- Player -->
         <div class="featured-player">
-            <div id="titoloInRiproduzione" class="featured-title">▶ In Riproduzione: Watch System Crash - Episodio 1</div>
+            <div id="titoloInRiproduzione" class="featured-title">▶ Now Playing: Watch System Crash - Episode 1</div>
             <div class="video-wrapper">
                 <iframe id="videoPlayer" src="https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" allowfullscreen title="Watch System Crash"></iframe>
             </div>
         </div>
 
-     <!-- Sezione Episodi della Serie Corrente (Tutti i 31 Episodi Collegati) -->
+        <!-- Episodes Grid Section -->
         <div class="episodes-section">
-            <h2 class="section-title">Episodi di: Watch System Crash (31 Episodi)</h2>
+            <h2 class="section-title">Episodes: System Crash: Tyrant's Obsession (31 Episodes)</h2>
             <div class="episodes-grid">
                 
-                <!-- Episodi 1 - 4 -->
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 1')" class="episode-card" style="border-color: #e50914;"><h4>Ep 1</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236726931?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 2')" class="episode-card"><h4>Ep 2</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236796383?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 3')" class="episode-card"><h4>Ep 3</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236865921?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 4')" class="episode-card"><h4>Ep 4</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 1')" class="episode-card" style="border-color: #e50914;"><h4>Ep 1</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236726931?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 2')" class="episode-card"><h4>Ep 2</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236796383?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 3')" class="episode-card"><h4>Ep 3</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236865921?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 4')" class="episode-card"><h4>Ep 4</h4></a>
 
-                <!-- Episodi 5 - 31 -->
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236865922?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 5')" class="episode-card"><h4>Ep 5</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866008?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 6')" class="episode-card"><h4>Ep 6</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236865981?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 7')" class="episode-card"><h4>Ep 7</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236865923?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 8')" class="episode-card"><h4>Ep 8</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236865924?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 9')" class="episode-card"><h4>Ep 9</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866270?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 10')" class="episode-card"><h4>Ep 10</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866171?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 11')" class="episode-card"><h4>Ep 11</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866065?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 12')" class="episode-card"><h4>Ep 12</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866290?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 13')" class="episode-card"><h4>Ep 13</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866289?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 14')" class="episode-card"><h4>Ep 14</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866269?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 15')" class="episode-card"><h4>Ep 15</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866382?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 16')" class="episode-card"><h4>Ep 16</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866380?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 17')" class="episode-card"><h4>Ep 17</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866379?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 18')" class="episode-card"><h4>Ep 18</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866455?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 19')" class="episode-card"><h4>Ep 19</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866413?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 20')" class="episode-card"><h4>Ep 20</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866383?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 21')" class="episode-card"><h4>Ep 21</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866508?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 22')" class="episode-card"><h4>Ep 22</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866507?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 23')" class="episode-card"><h4>Ep 23</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866506?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 24')" class="episode-card"><h4>Ep 24</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866580?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 25')" class="episode-card"><h4>Ep 25</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866571?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 26')" class="episode-card"><h4>Ep 26</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866538?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 27')" class="episode-card"><h4>Ep 27</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866719?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 28')" class="episode-card"><h4>Ep 28</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866627?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 29')" class="episode-card"><h4>Ep 29</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866615?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 30')" class="episode-card"><h4>Ep 30</h4></a>
-                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866720?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'Watch System Crash - Episodio 31')" class="episode-card"><h4>Ep 31</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236865922?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 5')" class="episode-card"><h4>Ep 5</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866008?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 6')" class="episode-card"><h4>Ep 6</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236865981?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 7')" class="episode-card"><h4>Ep 7</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236865923?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 8')" class="episode-card"><h4>Ep 8</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236865924?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 9')" class="episode-card"><h4>Ep 9</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866270?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 10')" class="episode-card"><h4>Ep 10</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866171?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 11')" class="episode-card"><h4>Ep 11</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866065?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 12')" class="episode-card"><h4>Ep 12</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866290?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 13')" class="episode-card"><h4>Ep 13</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866289?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 14')" class="episode-card"><h4>Ep 14</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866269?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 15')" class="episode-card"><h4>Ep 15</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866382?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 16')" class="episode-card"><h4>Ep 16</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866380?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 17')" class="episode-card"><h4>Ep 17</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866379?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 18')" class="episode-card"><h4>Ep 18</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866455?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 19')" class="episode-card"><h4>Ep 19</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866413?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 20')" class="episode-card"><h4>Ep 20</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866383?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 21')" class="episode-card"><h4>Ep 21</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866508?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 22')" class="episode-card"><h4>Ep 22</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866507?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 23')" class="episode-card"><h4>Ep 23</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866506?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 24')" class="episode-card"><h4>Ep 24</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866580?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 25')" class="episode-card"><h4>Ep 25</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866571?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 26')" class="episode-card"><h4>Ep 26</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866538?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 27')" class="episode-card"><h4>Ep 27</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866719?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 28')" class="episode-card"><h4>Ep 28</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866627?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 29')" class="episode-card"><h4>Ep 29</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866615?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 30')" class="episode-card"><h4>Ep 30</h4></a>
+                <a onclick="cambiaEpisodio('https://player.vimeo.com/video/1236866720?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58798', 'System Crash - Episode 31')" class="episode-card"><h4>Ep 31</h4></a>
 
             </div>
         </div>
 
-        <!-- Libreria completa altre serie -->
-        <h2 class="section-title">Tutte le Mini-Serie e i Filmati Sbloccati</h2>
+        <!-- Full Library -->
+        <h2 class="section-title">All Unlocked Mini-Series & Movies</h2>
         <div class="catalog-grid">
             <div class="catalog-card">
                 <div style="background: #e50914; height: 220px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;">[ System Crash ]</div>
                 <div class="catalog-info">
-                    <h3>Watch System Crash</h3>
-                    <p>Disponibile in HD</p>
+                    <h3>System Crash: Tyrant's Obsession</h3>
+                    <p>Available in HD</p>
                 </div>
             </div>
             <div class="catalog-card">
                 <div style="background: #333; height: 220px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;">[ Cyber City 2099 ]</div>
                 <div class="catalog-info">
                     <h3>Cyber City 2099</h3>
-                    <p>Nuova uscita</p>
+                    <p>New Release</p>
                 </div>
             </div>
             <div class="catalog-card">
                 <div style="background: #444; height: 220px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;">[ Shadows of Vegas ]</div>
                 <div class="catalog-info">
                     <h3>Shadows of Vegas</h3>
-                    <p>Esclusiva Premium</p>
+                    <p>Premium Exclusive</p>
                 </div>
             </div>
             <div class="catalog-card">
                 <div style="background: #222; height: 220px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;">[ Neon Dreams ]</div>
                 <div class="catalog-info">
                     <h3>Neon Dreams</h3>
-                    <p>Stagione Completa</p>
+                    <p>Full Season</p>
                 </div>
             </div>
         </div>
 
-        <a href="#top" class="back-home">↑ Torna all'inizio del catalogo</a>
+        <a href="#top" class="back-home">↑ Back to top</a>
     </div>
 
     <script>
         function cambiaEpisodio(urlVimeo, titoloEpisodio) {
             document.getElementById('videoPlayer').src = urlVimeo;
-            document.getElementById('titoloInRiproduzione').innerText = '▶ In Riproduzione: ' + titoloEpisodio;
+            document.getElementById('titoloInRiproduzione').innerText = '▶ Now Playing: ' + titoloEpisodio;
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
     </script>

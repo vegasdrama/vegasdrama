@@ -5,7 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogo Abbonati - Vegasdrama</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  /* Griglia episodi compatta per tutti i 31 episodi */
+        .episodes-section { margin-bottom: 40px; }
+        .episodes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); /* Pulsanti più piccoli e vicini */
+            gap: 10px;
+            margin-top: 15px;
+            max-height: 250px; /* Aggiunge lo scroll se diventano troppi, così non allungano troppo la pagina */
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+        .episode-card {
+            background: #1f1f1f;
+            border: 1px solid #333;
+            border-radius: 6px;
+            padding: 10px 5px;
+            text-align: center;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            cursor: pointer;
+        }
+        .episode-card:hover { border-color: #e50914; background: #262626; transform: translateY(-2px); }
+        .episode-card h4 { font-size: 13px; margin: 0; }      * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
         body { background-color: #141414; color: #fff; }
         
         header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #141414; border-bottom: 1px solid #333; }

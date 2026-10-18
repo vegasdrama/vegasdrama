@@ -145,7 +145,7 @@
             <p>Watch top AI shorts and dramas in cinematic quality.</p>
             
             <div class="hero-btns">
-                <a href="#" onclick="alert('Exclusive content for subscribers! Subscribe to a Basic or Premium plan above to unlock all videos.'); return false;" class="btn-main">▶ Watch Now</a>
+                <a href="piani.html" class="btn-main">▶ Watch Now</a>
                 <a href="piani.html" class="btn-secondary">ℹ️ More Info</a>
             </div>
         </div>
@@ -178,23 +178,23 @@
             <div class="section-heading">🔥 Most Watched (Full Series)</div>
             <div class="cards-scroll-container">
                 
-                <!-- New Series Card -->
-                <a href="#" onclick="alert('Exclusive content for subscribers! Subscribe to a Basic or Premium plan above to unlock all videos.'); return false;" class="card" style="background-image: url('heiress.jpg');">
+                <!-- Card 1 -->
+                <a href="piani.html" class="card locked-card" style="background-image: url('heiress.jpg');">
                     <div class="card-title">The Rejected Heiress Is a Billionaire (30 Ep)</div>
                 </a>
 
                 <!-- Card 2 -->
-                <a href="#" onclick="alert('Exclusive content for subscribers! Subscribe to a Basic or Premium plan above to unlock all videos.'); return false;" class="card" style="background-image: url('mafia.jpg');">
+                <a href="piani.html" class="card locked-card" style="background-image: url('mafia.jpg');">
                     <div class="card-title">I Married The Mafia Devil (40 Ep)</div>
                 </a>
 
                 <!-- Card 3 -->
-                <a href="#" onclick="alert('Exclusive content for subscribers! Subscribe to a Basic or Premium plan above to unlock all videos.'); return false;" class="card" style="background-image: url('https://vumbnail.com/1236723346.jpg');">
+                <a href="piani.html" class="card locked-card" style="background-image: url('https://vumbnail.com/1236723346.jpg');">
                     <div class="card-title">System Crash: Tyrant's Obsession</div>
                 </a>
 
                 <!-- Card 4 -->
-                <a href="#" onclick="alert('Exclusive content for subscribers! Subscribe to a Basic or Premium plan above to unlock all videos.'); return false;" class="card" style="background-image: url('https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=400');">
+                <a href="piani.html" class="card locked-card" style="background-image: url('https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=400');">
                     <div class="card-title">Cyber City 2099</div>
                 </a>
 
@@ -211,14 +211,12 @@
                 btn.innerText = 'Access Catalog';
                 btn.style.backgroundColor = '#46d369';
                 btn.style.color = '#fff';
-                btn.removeAttribute('onclick');
                 btn.removeAttribute('target');
             });
 
-            const lockedCards = document.querySelectorAll('a[onclick*="alert"]');
+            const lockedCards = document.querySelectorAll('.locked-card');
             lockedCards.forEach(card => {
                 card.href = 'sbloccato.html';
-                card.removeAttribute('onclick');
             });
         }
     </script>

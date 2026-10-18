@@ -106,43 +106,6 @@
             color: #fff;
         }
 
-        /* Modal Player for Free Trials */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 100;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.9);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            position: relative;
-            width: 90%;
-            max-width: 400px;
-            aspect-ratio: 9/16;
-            background: #000;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .modal-content iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-        .close-modal {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            color: #fff;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
         /* Mobile Layout */
         @media (max-width: 768px) {
             header { padding: 15px 20px; flex-direction: row; }
@@ -192,13 +155,16 @@
             <div class="section-heading">🎬 Free Trials & Teasers</div>
             <div class="cards-scroll-container">
                 
-                <!-- Free Trial 1: I Married The Mafia Devil -->
+                <a href="trial.html?serie=heiress" class="card" style="background-image: url('https://vumbnail.com/1236913598.jpg');">
+                    <span class="card-tag">FREE TRIAL</span>
+                    <div class="card-title">The Rejected Heiress Is a Billionaire - Ep 1</div>
+                </a>
+
                 <a href="trial.html?serie=mafiadevil" class="card" style="background-image: url('mafia.jpg');">
                     <span class="card-tag">FREE TRIAL</span>
                     <div class="card-title">I Married The Mafia Devil - Ep 1</div>
                 </a>
 
-                <!-- Free Trial 2: System Crash -->
                 <a href="trial.html?serie=systemcrash" class="card" style="background-image: url('https://vumbnail.com/1236723346.jpg');">
                     <span class="card-tag">FREE TRIAL</span>
                     <div class="card-title">System Crash - Ep 1</div>
@@ -212,50 +178,32 @@
             <div class="section-heading">🔥 Most Watched (Full Series)</div>
             <div class="cards-scroll-container">
                 
-                <!-- Card 1 -->
+                <!-- New Series Card -->
+                <a href="#" onclick="alert('Exclusive content for subscribers! Subscribe to a Basic or Premium plan above to unlock all videos.'); return false;" class="card" style="background-image: url('https://vumbnail.com/1236913598.jpg');">
+                    <div class="card-title">The Rejected Heiress Is a Billionaire (30 Ep)</div>
+                </a>
+
+                <!-- Card 2 -->
                 <a href="#" onclick="alert('Exclusive content for subscribers! Subscribe to a Basic or Premium plan above to unlock all videos.'); return false;" class="card" style="background-image: url('mafia.jpg');">
                     <div class="card-title">I Married The Mafia Devil (40 Ep)</div>
                 </a>
 
-                <!-- Card 2 -->
+                <!-- Card 3 -->
                 <a href="#" onclick="alert('Exclusive content for subscribers! Subscribe to a Basic or Premium plan above to unlock all videos.'); return false;" class="card" style="background-image: url('https://vumbnail.com/1236723346.jpg');">
                     <div class="card-title">System Crash: Tyrant's Obsession</div>
                 </a>
 
-                <!-- Card 3 -->
+                <!-- Card 4 -->
                 <a href="#" onclick="alert('Exclusive content for subscribers! Subscribe to a Basic or Premium plan above to unlock all videos.'); return false;" class="card" style="background-image: url('https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=400');">
                     <div class="card-title">Cyber City 2099</div>
-                </a>
-
-                <!-- Card 4 -->
-                <a href="#" onclick="alert('Exclusive content for subscribers! Subscribe to a Basic or Premium plan above to unlock all videos.'); return false;" class="card" style="background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=400');">
-                    <div class="card-title">Shadows of Vegas</div>
                 </a>
 
             </div>
         </div>
     </div>
 
-    <!-- Modal Pop-up per vedere i Free Trials -->
-    <div id="trialModal" class="modal" onclick="chiudiFreeTrial()">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-modal" onclick="chiudiFreeTrial()">&times;</span>
-            <iframe id="trialPlayer" src="" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <!-- Scripts -->
+    <!-- Active Subscription Script -->
     <script>
-        function apriFreeTrial(urlVimeo) {
-            document.getElementById('trialPlayer').src = urlVimeo;
-            document.getElementById('trialModal').style.display = 'flex';
-        }
-
-        function chiudiFreeTrial() {
-            document.getElementById('trialPlayer').src = '';
-            document.getElementById('trialModal').style.display = 'none';
-        }
-
         if (localStorage.getItem('vegasdrama_subscribed') === 'true') {
             const subscribeBtns = document.querySelectorAll('.btn-subscribe, .btn-main');
             subscribeBtns.forEach(btn => {

@@ -51,7 +51,7 @@
         .btn-secondary:hover { background-color: rgba(109, 109, 110, 0.4); }
 
         /* Sections and Cards Grid */
-        .featured-section { margin-top: 20px; }
+        .featured-section { margin-top: 25px; }
         .section-heading { font-size: 22px; font-weight: bold; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
 
         .cards-scroll-container {
@@ -95,6 +95,11 @@
 
         .card-tag-blue {
             background: #0071eb;
+        }
+
+        .card-tag-gold {
+            background: #f5a623;
+            color: #000;
         }
 
         .card-title {
@@ -146,7 +151,7 @@
     <div class="hero">
         <div class="hero-content">
             <h1>Vegas Drama Exclusives</h1>
-            <p>Watch top AI shorts and dramas in cinematic quality.</p>
+            <p>Watch top AI shorts, movies and dramas in cinematic quality.</p>
             
             <div class="hero-btns">
                 <a href="piani.html" class="btn-main">▶ Watch Now</a>
@@ -154,12 +159,11 @@
             </div>
         </div>
 
-        <!-- 🎬 SEZIONE FREE TRIALS & MOVIES -->
+        <!-- 🎬 SEZIONE FREE TRIALS & TEASERS -->
         <div class="featured-section">
-            <div class="section-heading">🎬 Free Trials & Full Teasers</div>
+            <div class="section-heading">🎬 Free Trials & Short Teasers</div>
             <div class="cards-scroll-container">
                 
-                <!-- FILM GRATUITO CON COPERTINA IMG_3378.jpeg -->
                 <a href="trial.html?serie=threegirls" class="card" style="background-image: url('IMG_3378.jpeg');">
                     <span class="card-tag card-tag-blue">FREE MOVIE</span>
                     <div class="card-title">Three girls from the system for me</div>
@@ -183,8 +187,32 @@
             </div>
         </div>
 
-        <!-- 🔥 SEZIONE MOST WATCHED (RISERVATA) -->
-        <div class="featured-section" style="margin-top: 30px;">
+        <!-- 🍿 NUOVA SEZIONE: FULL MOVIES -->
+        <div class="featured-section">
+            <div class="section-heading">🍿 Full Length Movies (2h+)</div>
+            <div class="cards-scroll-container">
+                
+                <!-- Spazio pronto per il tuo nuovo film da 2 ore -->
+                <a href="piani.html" class="card locked-card" id="newMovieCard" style="background-image: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=400');">
+                    <span class="card-tag card-tag-gold">2 HOURS</span>
+                    <div class="card-title" id="newMovieTitle">New Movie (Uploading...)</div>
+                </a>
+
+                <a href="piani.html" class="card locked-card" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400');">
+                    <span class="card-tag card-tag-gold">MOVIE</span>
+                    <div class="card-title">AI Genesis: The Awakening</div>
+                </a>
+
+                <a href="piani.html" class="card locked-card" style="background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=400');">
+                    <span class="card-tag card-tag-gold">MOVIE</span>
+                    <div class="card-title">Shadows of Vegas: Director's Cut</div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- 🔥 SEZIONE MOST WATCHED (FULL SERIES) -->
+        <div class="featured-section">
             <div class="section-heading">🔥 Most Watched (Full Series)</div>
             <div class="cards-scroll-container">
                 

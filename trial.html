@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Trial - Vegasdrama</title>
+    <title>Free Preview - Vegasdrama</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
         body { background-color: #141414; color: #fff; }
@@ -14,7 +14,7 @@
 
         .main-container { max-width: 900px; margin: 30px auto; padding: 0 20px; text-align: center; }
         
-        .badge-free { background: #E50914; color: #fff; font-size: 12px; font-weight: bold; padding: 4px 12px; border-radius: 12px; display: inline-block; margin-bottom: 15px; }
+        .badge-free { background: #0071eb; color: #fff; font-size: 12px; font-weight: bold; padding: 4px 12px; border-radius: 12px; display: inline-block; margin-bottom: 15px; }
         h1 { font-size: 28px; margin-bottom: 10px; }
         p.subtitle { font-size: 16px; color: #aaa; margin-bottom: 25px; }
 
@@ -68,27 +68,28 @@
 
     <div class="main-container">
         
-        <span class="badge-free">FREE TRIAL EPISODE</span>
-        <h1 id="seriesTitle">The Rejected Heiress Is a Billionaire - Episode 1</h1>
-        <p class="subtitle">Enjoy this free preview episode. Subscribe to unlock the full season!</p>
+        <span id="typeBadge" class="badge-free">FREE MOVIE</span>
+        <h1 id="seriesTitle">Three girls from the system for me</h1>
+        <p class="subtitle">Enjoy this free full movie. Subscribe to unlock all exclusive series!</p>
 
         <!-- Selector -->
         <div class="trial-selector">
-            <button class="trial-btn active" onclick="caricaTrial('https://player.vimeo.com/video/1236913598?h=f6321ae2e0&title=0&byline=0&portrait=0', 'The Rejected Heiress Is a Billionaire - Episode 1', this)">The Rejected Heiress</button>
-            <button class="trial-btn" onclick="caricaTrial('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0', 'I Married The Mafia Devil - Episode 1', this)">I Married The Mafia Devil</button>
-            <button class="trial-btn" onclick="caricaTrial('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0', 'System Crash: Tyrant\'s Obsession - Episode 1', this)">System Crash</button>
+            <button class="trial-btn active" onclick="caricaTrial('https://player.vimeo.com/video/1236928087?h=1556ee0a70&title=0&byline=0&portrait=0', 'Three girls from the system for me (Full Movie)', this, 'FREE MOVIE')">Three girls from the system for me</button>
+            <button class="trial-btn" onclick="caricaTrial('https://player.vimeo.com/video/1236913598?h=f6321ae2e0&title=0&byline=0&portrait=0', 'The Rejected Heiress Is a Billionaire - Episode 1', this, 'FREE TRIAL')">The Rejected Heiress</button>
+            <button class="trial-btn" onclick="caricaTrial('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0', 'I Married The Mafia Devil - Episode 1', this, 'FREE TRIAL')">I Married The Mafia Devil</button>
+            <button class="trial-btn" onclick="caricaTrial('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0', 'System Crash: Tyrant\'s Obsession - Episode 1', this, 'FREE TRIAL')">System Crash</button>
         </div>
 
         <!-- Player -->
         <div class="player-box">
             <div class="video-wrapper">
-                <iframe id="trialIframe" src="https://player.vimeo.com/video/1236913598?h=f6321ae2e0&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe id="trialIframe" src="https://player.vimeo.com/video/1236928087?h=1556ee0a70&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
         </div>
 
         <!-- Unlock Banner -->
         <div class="unlock-box">
-            <h2>Want to see what happens next? 🍿</h2>
+            <h2>Want to see full series and more movies? 🍿</h2>
             <p>Get full access to all 100+ episodes and all series in Full HD.</p>
             <a href="https://buy.stripe.com/6oU28u0nwcDh1KG2l9dEs00" target="_blank" class="btn-unlock">🔓 Unlock Full Catalog (€4.99/mo)</a>
         </div>
@@ -101,17 +102,26 @@
         const serieParam = urlParams.get('serie');
         const btns = document.querySelectorAll('.trial-btn');
 
-        if (serieParam === 'mafiadevil') {
-            caricaTrial('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0', "I Married The Mafia Devil - Episode 1", btns[1]);
+        if (serieParam === 'heiress') {
+            caricaTrial('https://player.vimeo.com/video/1236913598?h=f6321ae2e0&title=0&byline=0&portrait=0', "The Rejected Heiress Is a Billionaire - Episode 1", btns[1], 'FREE TRIAL');
+        } else if (serieParam === 'mafiadevil') {
+            caricaTrial('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0', "I Married The Mafia Devil - Episode 1", btns[2], 'FREE TRIAL');
         } else if (serieParam === 'systemcrash') {
-            caricaTrial('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0', "System Crash: Tyrant's Obsession - Episode 1", btns[2]);
+            caricaTrial('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0', "System Crash: Tyrant's Obsession - Episode 1", btns[3], 'FREE TRIAL');
         } else {
-            caricaTrial('https://player.vimeo.com/video/1236913598?h=f6321ae2e0&title=0&byline=0&portrait=0', "The Rejected Heiress Is a Billionaire - Episode 1", btns[0]);
+            caricaTrial('https://player.vimeo.com/video/1236928087?h=1556ee0a70&title=0&byline=0&portrait=0', "Three girls from the system for me (Full Movie)", btns[0], 'FREE MOVIE');
         }
 
-        function caricaTrial(url, titolo, elementoBtn) {
+        function caricaTrial(url, titolo, elementoBtn, badgeText) {
             document.getElementById('trialIframe').src = url;
             document.getElementById('seriesTitle').innerText = titolo;
+            document.getElementById('typeBadge').innerText = badgeText;
+            
+            if (badgeText === 'FREE MOVIE') {
+                document.getElementById('typeBadge').style.background = '#0071eb';
+            } else {
+                document.getElementById('typeBadge').style.background = '#E50914';
+            }
             
             document.querySelectorAll('.trial-btn').forEach(btn => btn.classList.remove('active'));
             if(elementoBtn) elementoBtn.classList.add('active');

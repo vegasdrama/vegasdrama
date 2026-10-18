@@ -69,12 +69,13 @@
     <div class="main-container">
         
         <span id="typeBadge" class="badge-free">FREE MOVIE</span>
-        <h1 id="seriesTitle">Spider-Man Brand New Day</h1>
+        <h1 id="seriesTitle">Resident Evil</h1>
         <p class="subtitle">Enjoy this free full movie. Subscribe to unlock all exclusive series!</p>
 
         <!-- Selector -->
         <div class="trial-selector">
-            <button class="trial-btn active" onclick="caricaTrial('https://player.vimeo.com/video/1236941778?h=473f17fafa&title=0&byline=0&portrait=0', 'Spider-Man Brand New Day', this, 'FREE MOVIE')">Spider-Man Brand New Day</button>
+            <button class="trial-btn active" onclick="caricaTrial('https://player.vimeo.com/video/1237013608?h=3bbe9d5b41&title=0&byline=0&portrait=0', 'Resident Evil', this, 'FREE MOVIE')">Resident Evil</button>
+            <button class="trial-btn" onclick="caricaTrial('https://player.vimeo.com/video/1236941778?h=473f17fafa&title=0&byline=0&portrait=0', 'Spider-Man Brand New Day', this, 'FREE MOVIE')">Spider-Man Brand New Day</button>
             <button class="trial-btn" onclick="caricaTrial('https://player.vimeo.com/video/1236928087?h=1556ee0a70&title=0&byline=0&portrait=0', 'Three girls from the system for me', this, 'FREE MOVIE')">Three girls from the system for me</button>
             <button class="trial-btn" onclick="caricaTrial('https://player.vimeo.com/video/1236913598?h=f6321ae2e0&title=0&byline=0&portrait=0', 'The Rejected Heiress Is a Billionaire - Episode 1', this, 'FREE TRIAL')">The Rejected Heiress</button>
             <button class="trial-btn" onclick="caricaTrial('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0', 'I Married The Mafia Devil - Episode 1', this, 'FREE TRIAL')">I Married The Mafia Devil</button>
@@ -84,7 +85,7 @@
         <!-- Player -->
         <div class="player-box">
             <div class="video-wrapper">
-                <iframe id="trialIframe" src="https://player.vimeo.com/video/1236941778?h=473f17fafa&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe id="trialIframe" src="https://player.vimeo.com/video/1237013608?h=3bbe9d5b41&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -103,16 +104,18 @@
         const serieParam = urlParams.get('serie');
         const btns = document.querySelectorAll('.trial-btn');
 
-        if (serieParam === 'threegirls') {
-            caricaTrial('https://player.vimeo.com/video/1236928087?h=1556ee0a70&title=0&byline=0&portrait=0', "Three girls from the system for me", btns[1], 'FREE MOVIE');
+        if (serieParam === 'spiderman') {
+            caricaTrial('https://player.vimeo.com/video/1236941778?h=473f17fafa&title=0&byline=0&portrait=0', "Spider-Man Brand New Day", btns[1], 'FREE MOVIE');
+        } else if (serieParam === 'threegirls') {
+            caricaTrial('https://player.vimeo.com/video/1236928087?h=1556ee0a70&title=0&byline=0&portrait=0', "Three girls from the system for me", btns[2], 'FREE MOVIE');
         } else if (serieParam === 'heiress') {
-            caricaTrial('https://player.vimeo.com/video/1236913598?h=f6321ae2e0&title=0&byline=0&portrait=0', "The Rejected Heiress Is a Billionaire - Episode 1", btns[2], 'FREE TRIAL');
+            caricaTrial('https://player.vimeo.com/video/1236913598?h=f6321ae2e0&title=0&byline=0&portrait=0', "The Rejected Heiress Is a Billionaire - Episode 1", btns[3], 'FREE TRIAL');
         } else if (serieParam === 'mafiadevil') {
-            caricaTrial('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0', "I Married The Mafia Devil - Episode 1", btns[3], 'FREE TRIAL');
+            caricaTrial('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0', "I Married The Mafia Devil - Episode 1", btns[4], 'FREE TRIAL');
         } else if (serieParam === 'systemcrash') {
-            caricaTrial('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0', "System Crash: Tyrant's Obsession - Episode 1", btns[4], 'FREE TRIAL');
+            caricaTrial('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0', "System Crash: Tyrant's Obsession - Episode 1", btns[5], 'FREE TRIAL');
         } else {
-            caricaTrial('https://player.vimeo.com/video/1236941778?h=473f17fafa&title=0&byline=0&portrait=0', "Spider-Man Brand New Day", btns[0], 'FREE MOVIE');
+            caricaTrial('https://player.vimeo.com/video/1237013608?h=3bbe9d5b41&title=0&byline=0&portrait=0', "Resident Evil", btns[0], 'FREE MOVIE');
         }
 
         function caricaTrial(url, titolo, elementoBtn, badgeText) {

@@ -18,6 +18,49 @@
         h1 { font-size: 28px; margin-bottom: 10px; }
         p.subtitle { font-size: 16px; color: #aaa; margin-bottom: 25px; }
 
+        /* Scrollable Posters Carousel */
+        .poster-carousel {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding: 10px 5px 20px 5px;
+            margin-bottom: 25px;
+            scrollbar-width: none;
+        }
+        .poster-carousel::-webkit-scrollbar { display: none; }
+
+        .poster-card {
+            min-width: 100px;
+            width: 100px;
+            height: 150px;
+            border-radius: 6px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            flex-shrink: 0;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: transform 0.2s, border-color 0.2s;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .poster-card:hover { transform: scale(1.05); }
+        .poster-card.active { border-color: #E50914; transform: scale(1.08); box-shadow: 0 0 12px rgba(229, 9, 20, 0.6); }
+
+        .poster-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.85);
+            font-size: 10px;
+            font-weight: bold;
+            padding: 4px;
+            text-align: center;
+            line-height: 1.2;
+            color: #fff;
+        }
+
         /* Video Player */
         .player-box {
             background: #1f1f1f;
@@ -36,11 +79,6 @@
             overflow: hidden;
         }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-
-        /* Selector for Free Episodes */
-        .trial-selector { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
-        .trial-btn { background: #262626; color: #fff; border: 1px solid #444; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: 0.2s; }
-        .trial-btn:hover, .trial-btn.active { border-color: #E50914; background: #333; }
 
         /* Unlock Banner */
         .unlock-box {
@@ -69,24 +107,48 @@
     <div class="main-container">
         
         <span id="typeBadge" class="badge-free">FREE MOVIE</span>
-        <h1 id="seriesTitle">Io sono la fine del mondo</h1>
+        <h1 id="seriesTitle">Cado dalle nubi</h1>
         <p class="subtitle">Enjoy this free full movie. Subscribe to unlock all exclusive series!</p>
 
-        <!-- Selector -->
-        <div class="trial-selector">
-            <button class="trial-btn active" onclick="caricaTrial('https://player.vimeo.com/video/1238474585?h=4fd39ca29e&title=0&byline=0&portrait=0', 'Io sono la fine del mondo', this, 'FREE MOVIE')">Io sono la fine del mondo</button>
-            <button class="trial-btn" onclick="caricaTrial('https://player.vimeo.com/video/1237013608?h=3bbe9d5b41&title=0&byline=0&portrait=0', 'Resident Evil', this, 'FREE MOVIE')">Resident Evil</button>
-            <button class="trial-btn" onclick="caricaTrial('https://player.vimeo.com/video/1236941778?h=473f17fafa&title=0&byline=0&portrait=0', 'Spider-Man Brand New Day', this, 'FREE MOVIE')">Spider-Man Brand New Day</button>
-            <button class="trial-btn" onclick="caricaTrial('https://player.vimeo.com/video/1236928087?h=1556ee0a70&title=0&byline=0&portrait=0', 'Three girls from the system for me', this, 'FREE MOVIE')">Three girls from the system for me</button>
-            <button class="trial-btn" onclick="caricaTrial('https://player.vimeo.com/video/1236913598?h=f6321ae2e0&title=0&byline=0&portrait=0', 'The Rejected Heiress Is a Billionaire - Episode 1', this, 'FREE TRIAL')">The Rejected Heiress</button>
-            <button class="trial-btn" onclick="caricaTrial('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0', 'I Married The Mafia Devil - Episode 1', this, 'FREE TRIAL')">I Married The Mafia Devil</button>
-            <button class="trial-btn" onclick="caricaTrial('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0', 'System Crash: Tyrant\'s Obsession - Episode 1', this, 'FREE TRIAL')">System Crash</button>
+        <!-- Carosello Locandine -->
+        <div class="poster-carousel">
+            <div class="poster-card active" style="background-image: url('IMG_3534.jpeg');" onclick="caricaTrial('https://player.vimeo.com/video/1238491427?h=7120b865e5&title=0&byline=0&portrait=0', 'Cado dalle nubi', this, 'FREE MOVIE')">
+                <div class="poster-title">Cado dalle nubi</div>
+            </div>
+            
+            <div class="poster-card" style="background-image: url('fine_del_mondo.jpg');" onclick="caricaTrial('https://player.vimeo.com/video/1238474585?h=4fd39ca29e&title=0&byline=0&portrait=0', 'Io sono la fine del mondo', this, 'FREE MOVIE')">
+                <div class="poster-title">Fine del mondo</div>
+            </div>
+
+            <div class="poster-card" style="background-image: url('Resident_Evil_2026_film_poster.png');" onclick="caricaTrial('https://player.vimeo.com/video/1237013608?h=3bbe9d5b41&title=0&byline=0&portrait=0', 'Resident Evil', this, 'FREE MOVIE')">
+                <div class="poster-title">Resident Evil</div>
+            </div>
+
+            <div class="poster-card" style="background-image: url('IMG_3379.jpeg');" onclick="caricaTrial('https://player.vimeo.com/video/1236941778?h=473f17fafa&title=0&byline=0&portrait=0', 'Spider-Man Brand New Day', this, 'FREE MOVIE')">
+                <div class="poster-title">Spider-Man</div>
+            </div>
+
+            <div class="poster-card" style="background-image: url('IMG_3378.jpeg');" onclick="caricaTrial('https://player.vimeo.com/video/1236928087?h=1556ee0a70&title=0&byline=0&portrait=0', 'Three girls from the system for me', this, 'FREE MOVIE')">
+                <div class="poster-title">Three Girls</div>
+            </div>
+
+            <div class="poster-card" style="background-image: url('heiress.jpg');" onclick="caricaTrial('https://player.vimeo.com/video/1236913598?h=f6321ae2e0&title=0&byline=0&portrait=0', 'The Rejected Heiress Is a Billionaire - Episode 1', this, 'FREE TRIAL')">
+                <div class="poster-title">Heiress Ep.1</div>
+            </div>
+
+            <div class="poster-card" style="background-image: url('mafia.jpg');" onclick="caricaTrial('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0', 'I Married The Mafia Devil - Episode 1', this, 'FREE TRIAL')">
+                <div class="poster-title">Mafia Devil Ep.1</div>
+            </div>
+
+            <div class="poster-card" style="background-image: url('https://vumbnail.com/1236723346.jpg');" onclick="caricaTrial('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0', 'System Crash: Tyrant\'s Obsession - Episode 1', this, 'FREE TRIAL')">
+                <div class="poster-title">System Crash Ep.1</div>
+            </div>
         </div>
 
-        <!-- Player -->
+        <!-- Video Player -->
         <div class="player-box">
             <div class="video-wrapper">
-                <iframe id="trialIframe" src="https://player.vimeo.com/video/1238474585?h=4fd39ca29e&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe id="trialIframe" src="https://player.vimeo.com/video/1238491427?h=7120b865e5&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -103,25 +165,27 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const serieParam = urlParams.get('serie');
-        const btns = document.querySelectorAll('.trial-btn');
+        const cards = document.querySelectorAll('.poster-card');
 
-        if (serieParam === 'residentevil') {
-            caricaTrial('https://player.vimeo.com/video/1237013608?h=3bbe9d5b41&title=0&byline=0&portrait=0', "Resident Evil", btns[1], 'FREE MOVIE');
+        if (serieParam === 'finedelmondo') {
+            caricaTrial('https://player.vimeo.com/video/1238474585?h=4fd39ca29e&title=0&byline=0&portrait=0', "Io sono la fine del mondo", cards[1], 'FREE MOVIE');
+        } else if (serieParam === 'residentevil') {
+            caricaTrial('https://player.vimeo.com/video/1237013608?h=3bbe9d5b41&title=0&byline=0&portrait=0', "Resident Evil", cards[2], 'FREE MOVIE');
         } else if (serieParam === 'spiderman') {
-            caricaTrial('https://player.vimeo.com/video/1236941778?h=473f17fafa&title=0&byline=0&portrait=0', "Spider-Man Brand New Day", btns[2], 'FREE MOVIE');
+            caricaTrial('https://player.vimeo.com/video/1236941778?h=473f17fafa&title=0&byline=0&portrait=0', "Spider-Man Brand New Day", cards[3], 'FREE MOVIE');
         } else if (serieParam === 'threegirls') {
-            caricaTrial('https://player.vimeo.com/video/1236928087?h=1556ee0a70&title=0&byline=0&portrait=0', "Three girls from the system for me", btns[3], 'FREE MOVIE');
+            caricaTrial('https://player.vimeo.com/video/1236928087?h=1556ee0a70&title=0&byline=0&portrait=0', "Three girls from the system for me", cards[4], 'FREE MOVIE');
         } else if (serieParam === 'heiress') {
-            caricaTrial('https://player.vimeo.com/video/1236913598?h=f6321ae2e0&title=0&byline=0&portrait=0', "The Rejected Heiress Is a Billionaire - Episode 1", btns[4], 'FREE TRIAL');
+            caricaTrial('https://player.vimeo.com/video/1236913598?h=f6321ae2e0&title=0&byline=0&portrait=0', "The Rejected Heiress Is a Billionaire - Episode 1", cards[5], 'FREE TRIAL');
         } else if (serieParam === 'mafiadevil') {
-            caricaTrial('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0', "I Married The Mafia Devil - Episode 1", btns[5], 'FREE TRIAL');
+            caricaTrial('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0', "I Married The Mafia Devil - Episode 1", cards[6], 'FREE TRIAL');
         } else if (serieParam === 'systemcrash') {
-            caricaTrial('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0', "System Crash: Tyrant's Obsession - Episode 1", btns[6], 'FREE TRIAL');
+            caricaTrial('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0', "System Crash: Tyrant's Obsession - Episode 1", cards[7], 'FREE TRIAL');
         } else {
-            caricaTrial('https://player.vimeo.com/video/1238474585?h=4fd39ca29e&title=0&byline=0&portrait=0', "Io sono la fine del mondo", btns[0], 'FREE MOVIE');
+            caricaTrial('https://player.vimeo.com/video/1238491427?h=7120b865e5&title=0&byline=0&portrait=0', "Cado dalle nubi", cards[0], 'FREE MOVIE');
         }
 
-        function caricaTrial(url, titolo, elementoBtn, badgeText) {
+        function caricaTrial(url, titolo, elementoCard, badgeText) {
             document.getElementById('trialIframe').src = url;
             document.getElementById('seriesTitle').innerText = titolo;
             document.getElementById('typeBadge').innerText = badgeText;
@@ -132,11 +196,13 @@
                 document.getElementById('typeBadge').style.background = '#E50914';
             }
             
-            document.querySelectorAll('.trial-btn').forEach(btn => btn.classList.remove('active'));
-            if(elementoBtn) elementoBtn.classList.add('active');
+            document.querySelectorAll('.poster-card').forEach(card => card.classList.remove('active'));
+            if(elementoCard) {
+                elementoCard.classList.add('active');
+                elementoCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
         }
     </script>
 
 </body>
 </html>
-

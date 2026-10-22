@@ -107,12 +107,16 @@
     <div class="main-container">
         
         <span id="typeBadge" class="badge-free">FREE MOVIE</span>
-        <h1 id="seriesTitle">Cado dalle nubi</h1>
+        <h1 id="seriesTitle">Così è la vita</h1>
         <p class="subtitle">Enjoy this free full movie. Subscribe to unlock all exclusive series!</p>
 
         <!-- Carosello Locandine -->
         <div class="poster-carousel">
-            <div class="poster-card active" style="background-image: url('IMG_3534.jpeg');" onclick="caricaTrial('https://player.vimeo.com/video/1238491427?h=7120b865e5&title=0&byline=0&portrait=0', 'Cado dalle nubi', this, 'FREE MOVIE')">
+            <div class="poster-card active" style="background-image: url('IMG_3541.jpeg');" onclick="caricaTrial('https://player.vimeo.com/video/1238521968?h=e16be23333&title=0&byline=0&portrait=0', 'Così è la vita', this, 'FREE MOVIE')">
+                <div class="poster-title">Così è la vita</div>
+            </div>
+
+            <div class="poster-card" style="background-image: url('IMG_3534.jpeg');" onclick="caricaTrial('https://player.vimeo.com/video/1238491427?h=7120b865e5&title=0&byline=0&portrait=0', 'Cado dalle nubi', this, 'FREE MOVIE')">
                 <div class="poster-title">Cado dalle nubi</div>
             </div>
             
@@ -148,7 +152,7 @@
         <!-- Video Player -->
         <div class="player-box">
             <div class="video-wrapper">
-                <iframe id="trialIframe" src="https://player.vimeo.com/video/1238491427?h=7120b865e5&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe id="trialIframe" src="https://player.vimeo.com/video/1238521968?h=e16be23333&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -167,22 +171,24 @@
         const serieParam = urlParams.get('serie');
         const cards = document.querySelectorAll('.poster-card');
 
-        if (serieParam === 'finedelmondo') {
-            caricaTrial('https://player.vimeo.com/video/1238474585?h=4fd39ca29e&title=0&byline=0&portrait=0', "Io sono la fine del mondo", cards[1], 'FREE MOVIE');
+        if (serieParam === 'cadodallenubi') {
+            caricaTrial('https://player.vimeo.com/video/1238491427?h=7120b865e5&title=0&byline=0&portrait=0', "Cado dalle nubi", cards[1], 'FREE MOVIE');
+        } else if (serieParam === 'finedelmondo') {
+            caricaTrial('https://player.vimeo.com/video/1238474585?h=4fd39ca29e&title=0&byline=0&portrait=0', "Io sono la fine del mondo", cards[2], 'FREE MOVIE');
         } else if (serieParam === 'residentevil') {
-            caricaTrial('https://player.vimeo.com/video/1237013608?h=3bbe9d5b41&title=0&byline=0&portrait=0', "Resident Evil", cards[2], 'FREE MOVIE');
+            caricaTrial('https://player.vimeo.com/video/1237013608?h=3bbe9d5b41&title=0&byline=0&portrait=0', "Resident Evil", cards[3], 'FREE MOVIE');
         } else if (serieParam === 'spiderman') {
-            caricaTrial('https://player.vimeo.com/video/1236941778?h=473f17fafa&title=0&byline=0&portrait=0', "Spider-Man Brand New Day", cards[3], 'FREE MOVIE');
+            caricaTrial('https://player.vimeo.com/video/1236941778?h=473f17fafa&title=0&byline=0&portrait=0', "Spider-Man Brand New Day", cards[4], 'FREE MOVIE');
         } else if (serieParam === 'threegirls') {
-            caricaTrial('https://player.vimeo.com/video/1236928087?h=1556ee0a70&title=0&byline=0&portrait=0', "Three girls from the system for me", cards[4], 'FREE MOVIE');
+            caricaTrial('https://player.vimeo.com/video/1236928087?h=1556ee0a70&title=0&byline=0&portrait=0', "Three girls from the system for me", cards[5], 'FREE MOVIE');
         } else if (serieParam === 'heiress') {
-            caricaTrial('https://player.vimeo.com/video/1236913598?h=f6321ae2e0&title=0&byline=0&portrait=0', "The Rejected Heiress Is a Billionaire - Episode 1", cards[5], 'FREE TRIAL');
+            caricaTrial('https://player.vimeo.com/video/1236913598?h=f6321ae2e0&title=0&byline=0&portrait=0', "The Rejected Heiress Is a Billionaire - Episode 1", cards[6], 'FREE TRIAL');
         } else if (serieParam === 'mafiadevil') {
-            caricaTrial('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0', "I Married The Mafia Devil - Episode 1", cards[6], 'FREE TRIAL');
+            caricaTrial('https://player.vimeo.com/video/1236893916?h=4ec98a5d5b&title=0&byline=0&portrait=0', "I Married The Mafia Devil - Episode 1", cards[7], 'FREE TRIAL');
         } else if (serieParam === 'systemcrash') {
-            caricaTrial('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0', "System Crash: Tyrant's Obsession - Episode 1", cards[7], 'FREE TRIAL');
+            caricaTrial('https://player.vimeo.com/video/1236723346?title=0&byline=0&portrait=0', "System Crash: Tyrant\'s Obsession - Episode 1", cards[8], 'FREE TRIAL');
         } else {
-            caricaTrial('https://player.vimeo.com/video/1238491427?h=7120b865e5&title=0&byline=0&portrait=0', "Cado dalle nubi", cards[0], 'FREE MOVIE');
+            caricaTrial('https://player.vimeo.com/video/1238521968?h=e16be23333&title=0&byline=0&portrait=0', "Così è la vita", cards[0], 'FREE MOVIE');
         }
 
         function caricaTrial(url, titolo, elementoCard, badgeText) {
